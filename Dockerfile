@@ -1,4 +1,3 @@
-
 FROM postgres:11
 
 # Install pgjwt extension
