@@ -16,7 +16,7 @@ env:
 
 before_script:
   - cd "${VERSION}/${VARIANT}"
-  - IMAGE="igabriele/postgresql-pgjwt:${VERSION}${VARIANT:+-${VARIANT}}"
+  - IMAGE="igabriele/postgresql-jwt:${VERSION}${VARIANT:+-${VARIANT}}"
 script:
   - docker build -t "${IMAGE}" .
 
