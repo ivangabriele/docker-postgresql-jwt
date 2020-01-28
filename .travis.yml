@@ -6,26 +6,26 @@ matrix:
 
 env:
   - VERSION=12
-  - VERSION=12 VARIANT=alpine
+  # - VERSION=12 VARIANT=alpine
   - VERSION=11
-  - VERSION=11 VARIANT=alpine
+  # - VERSION=11 VARIANT=alpine
   - VERSION=10
-  - VERSION=10 VARIANT=alpine
-  - VERSION=9
-  - VERSION=9 VARIANT=alpine
+  # - VERSION=10 VARIANT=alpine
+  # - VERSION=9
+  # - VERSION=9 VARIANT=alpine
 
 before_script:
-  - env | sort
   - cd "${VERSION}/${VARIANT}"
   - IMAGE="igabriele/postgresql-pgjwt:${VERSION}${VARIANT:+-${VARIANT}}"
 script:
   - docker build -t "${IMAGE}" .
-after_script:
+
+before_deploy:
   - docker images
 
 deploy:
   provider: script
-  script: ./script/push_to_docker.sh
+  script: ./scripts/ci/push_to_docker.sh
   skip_cleanup: true
   on:
     branch: master
