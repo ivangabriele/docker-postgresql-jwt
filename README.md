@@ -1,5 +1,6 @@
 # PostgreSQL Docker image with pgjwt extension
 
+[![img-docker]][link-docker]
 [![img-travis]][link-travis]
 
 A Docker image including:
@@ -17,8 +18,10 @@ For more information about how to use these functions, please check their [readm
 
 ---
 
-[img-travis]: https://img.shields.io/travis/com/ivangabriele/postgresql-pgjwt/master?style=flat-square
+[img-docker]: https://img.shields.io/docker/pulls/igabriele/postgresql-jwt?style=for-the-badge
+[img-travis]: https://img.shields.io/travis/com/ivangabriele/postgresql-pgjwt/master?style=for-the-badge
 
+[link-docker]: https://hub.docker.com/repository/docker/igabriele/postgresql-jwt
 [link-pgjwt]: https://github.com/michelp/pgjwt
 [link-pgjwt-usage]: https://github.com/michelp/pgjwt#usage
 [link-postgres]: https://hub.docker.com/_/postgres
