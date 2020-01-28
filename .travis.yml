@@ -1,0 +1,32 @@
+language: bash
+services: docker
+
+env:
+  - VERSION=12
+  - VERSION=12 VARIANT=alpine
+  - VERSION=11
+  - VERSION=11 VARIANT=alpine
+  - VERSION=10
+  - VERSION=10 VARIANT=alpine
+  - VERSION=9
+  - VERSION=9 VARIANT=alpine
+
+install:
+  - git clone https://github.com/docker-library/official-images.git ~/official-images
+
+before_script:
+  - env | sort
+  - cd "$VERSION/$VARIANT"
+  - IMAGE="ivangabriele/postgresql-pgjwt:${VERSION}${VARIANT:+-${VARIANT}}"
+
+script:
+  - docker build -t "${IMAGE}" .
+after_script:
+  - docker images
+
+deploy:
+  provider: script
+  script: ./script/push_to_docker.sh
+  on:
+    branch: master
+    repo: ivangabriele/postgresql-pgjwt
