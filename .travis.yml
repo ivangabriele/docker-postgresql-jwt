@@ -11,7 +11,7 @@ env:
   - VERSION=11 VARIANT=alpine
   - VERSION=10
   - VERSION=10 VARIANT=alpine
-  # - VERSION=9
+  - VERSION=9
   - VERSION=9 VARIANT=alpine
 
 before_script:
