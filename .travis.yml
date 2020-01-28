@@ -26,6 +26,7 @@ after_script:
 deploy:
   provider: script
   script: ./script/push_to_docker.sh
+  skip_cleanup: true
   on:
     branch: master
     repo: ivangabriele/postgresql-pgjwt
