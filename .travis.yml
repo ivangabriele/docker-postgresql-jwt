@@ -21,6 +21,12 @@ script:
   - docker build -t "${IMAGE}" .
 
 before_deploy:
+  - |
+    if [ "${PWD##*/}" = "alpine" ]; then
+      cd ../..
+    else
+      cd ..
+    fi
   - docker images
 deploy:
   provider: script
