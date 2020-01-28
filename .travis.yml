@@ -30,3 +30,13 @@ deploy:
   on:
     branch: master
     repo: ivangabriele/postgresql-pgjwt
+
+# Limit branches builds to "master" one:
+branches:
+  only:
+    - master
+
+notifications:
+  email:
+    on_failure: change
+    on_success: never
