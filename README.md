@@ -1,5 +1,7 @@
 # PostgreSQL Docker image with pgjwt extension
 
+[![img-travis]][link-travis]
+
 A Docker image including:
 - [PostgreSQL][link-postgres]
 - [PostgreSQL pgjwt extension][link-pgjwt]
@@ -15,6 +17,9 @@ For more information about how to use these functions, please check their [readm
 
 ---
 
+[img-travis]: https://img.shields.io/travis/com/ivangabriele/postgresql-pgjwt/master?style=flat-square
+
 [link-pgjwt]: https://github.com/michelp/pgjwt
 [link-pgjwt-usage]: https://github.com/michelp/pgjwt#usage
 [link-postgres]: https://hub.docker.com/_/postgres
+[link-travis]: https://travis-ci.com/ivangabriele/postgresql-pgjwt
