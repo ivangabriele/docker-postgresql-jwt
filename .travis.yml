@@ -1,6 +1,9 @@
 language: bash
 services: docker
 
+matrix:
+  fast_finish: true
+
 env:
   - VERSION=12
   - VERSION=12 VARIANT=alpine
@@ -13,12 +16,10 @@ env:
 
 install:
   - git clone https://github.com/docker-library/official-images.git ~/official-images
-
 before_script:
   - env | sort
   - cd "$VERSION/$VARIANT"
   - IMAGE="igabriele/postgresql-pgjwt:${VERSION}${VARIANT:+-${VARIANT}}"
-
 script:
   - docker build -t "${IMAGE}" .
 after_script:
