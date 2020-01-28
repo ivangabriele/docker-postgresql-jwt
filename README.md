@@ -19,10 +19,10 @@ For more information about how to use these functions, please check their [readm
 ---
 
 [img-docker]: https://img.shields.io/docker/pulls/igabriele/postgresql-jwt?style=for-the-badge
-[img-travis]: https://img.shields.io/travis/com/ivangabriele/postgresql-pgjwt/master?style=for-the-badge
+[img-travis]: https://img.shields.io/travis/com/ivangabriele/docker-postgresql-jwt/master?style=for-the-badge
 
 [link-docker]: https://hub.docker.com/repository/docker/igabriele/postgresql-jwt
 [link-pgjwt]: https://github.com/michelp/pgjwt
 [link-pgjwt-usage]: https://github.com/michelp/pgjwt#usage
 [link-postgres]: https://hub.docker.com/_/postgres
-[link-travis]: https://travis-ci.com/ivangabriele/postgresql-pgjwt
+[link-travis]: https://travis-ci.com/ivangabriele/docker-postgresql-jwt

@@ -34,7 +34,7 @@ deploy:
   skip_cleanup: true
   on:
     branch: master
-    repo: ivangabriele/postgresql-pgjwt
+    repo: ivangabriele/docker-postgresql-jwt
 
 # Limit branches builds to "master" one:
 branches:
