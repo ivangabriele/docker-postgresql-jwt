@@ -4,4 +4,4 @@
 set -e
 
 echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USER" --password-stdin
-docker push ivangabriele/postgresql-pgjwt
+docker push igabriele/postgresql-pgjwt
