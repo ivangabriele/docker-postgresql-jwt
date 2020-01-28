@@ -1,4 +1,4 @@
-# PostgreSQL Docker image with pgjwt extension
+# PostgreSQL Docker image with JWT extension
 
 [![img-docker]][link-docker]
 [![img-travis]][link-travis]
