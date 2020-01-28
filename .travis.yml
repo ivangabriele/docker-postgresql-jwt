@@ -17,7 +17,7 @@ install:
 before_script:
   - env | sort
   - cd "$VERSION/$VARIANT"
-  - IMAGE="ivangabriele/postgresql-pgjwt:${VERSION}${VARIANT:+-${VARIANT}}"
+  - IMAGE="igabriele/postgresql-pgjwt:${VERSION}${VARIANT:+-${VARIANT}}"
 
 script:
   - docker build -t "${IMAGE}" .
