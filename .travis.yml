@@ -16,10 +16,10 @@ env:
 
 before_script:
   - env | sort
-  - cd "$VERSION/$VARIANT"
+  - cd "${VERSION}/${VARIANT}"
   - IMAGE="igabriele/postgresql-pgjwt:${VERSION}${VARIANT:+-${VARIANT}}"
 script:
-  - docker build -t "$IMAGE" .
+  - docker build -t "${IMAGE}" .
 after_script:
   - docker images
 
