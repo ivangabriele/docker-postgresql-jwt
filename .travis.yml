@@ -24,10 +24,10 @@ script:
 
 before_deploy:
   - |
-    if [ "${PWD##*/}" = "alpine" ]; then
-      cd ../..
-    else
+    if [ "${PWD}" = "alpine" ] || [ "${PWD##*/}" != "alpine" ]; then
       cd ..
+    else
+      cd ../..
     fi
   - docker images
 deploy:
