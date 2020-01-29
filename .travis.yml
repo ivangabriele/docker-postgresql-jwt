@@ -24,7 +24,7 @@ script:
 
 before_deploy:
   - |
-    if [ "${PWD}" = "alpine" ] || [ "${PWD##*/}" != "alpine" ]; then
+    if [ -z "${VARIANT}" ]; then
       cd ..
     else
       cd ../..
