@@ -5,6 +5,8 @@ matrix:
   fast_finish: true
 
 env:
+  - VERSION=latest
+  - VERSION=alpine
   - VERSION=12
   - VERSION=12 VARIANT=alpine
   - VERSION=11
